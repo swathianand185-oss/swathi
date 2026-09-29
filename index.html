@@ -1,13 +1,491 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>AWS CodePipeline Demo</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This site was deployed automatically using AWS CodePipeline.</p>
-    <p>Version 1.0</p>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">☁ CloudFlow</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#deployment">Deployment</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <span class="badge">● LIVE DEPLOYMENT</span>
+
+            <h1>
+                Build. Deploy.
+                <span>Repeat.</span>
+            </h1>
+
+            <p>
+                Welcome to my AWS-powered website.
+                This project is automatically deployed using
+                AWS CodePipeline.
+            </p>
+
+            <div class="buttons">
+                <a href="#deployment" class="primary-btn">
+                    View Deployment
+                </a>
+
+                <a href="#features" class="secondary-btn">
+                    Explore Features
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cloud-card">
+
+            <div class="cloud-icon">☁️</div>
+
+            <h2>AWS Cloud</h2>
+
+            <p>Deployment Status</p>
+
+            <div class="status">
+                <span>●</span> Successfully Deployed
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section id="features" class="features">
+
+        <h2>Why This Project?</h2>
+
+        <p class="section-text">
+            A simple demonstration of continuous integration
+            and continuous deployment using AWS.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h3>Fast Deployment</h3>
+                <p>
+                    Changes can be automatically deployed
+                    whenever new code is pushed.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🔄</div>
+                <h3>Continuous Delivery</h3>
+                <p>
+                    AWS CodePipeline helps move code through
+                    the deployment process automatically.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🔐</div>
+                <h3>Cloud Powered</h3>
+                <p>
+                    The website is hosted and deployed using
+                    modern cloud technologies.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Deployment Section -->
+    <section id="deployment" class="deployment">
+
+        <h2>Deployment Information</h2>
+
+        <div class="deployment-box">
+
+            <div>
+                <strong>Pipeline</strong>
+                <p>AWS CodePipeline</p>
+            </div>
+
+            <div>
+                <strong>Status</strong>
+                <p class="success">● Successful</p>
+            </div>
+
+            <div>
+                <strong>Version</strong>
+                <p>2.0</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 CloudFlow | Built with HTML & AWS
+        </p>
+
+        <p>
+            🚀 Automatically deployed with AWS CodePipeline
+        </p>
+
+    </footer>
+
 </body>
+
 </html>
+```
+
+And use this as your **`style.css`** to make it look much more unique:
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: white;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background: #0b1728;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #4fd1ff;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 10%;
+
+    background:
+        radial-gradient(circle at top right,
+        #123b5c,
+        #07111f 55%);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border: 1px solid #27e6a7;
+    border-radius: 30px;
+
+    color: #27e6a7;
+
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    margin: 25px 0;
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    color: #4fd1ff;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #b7c4d6;
+}
+
+
+/* Buttons */
+
+.buttons {
+    margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    margin-right: 10px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+}
+
+.primary-btn {
+    background: #4fd1ff;
+    color: #07111f;
+}
+
+.secondary-btn {
+    border: 1px solid #52677f;
+    color: white;
+}
+
+
+/* Cloud Card */
+
+.cloud-card {
+    width: 300px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.07);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(10px);
+}
+
+.cloud-icon {
+    font-size: 70px;
+}
+
+.cloud-card h2 {
+    margin: 15px 0;
+}
+
+.cloud-card p {
+    color: #aab8c9;
+}
+
+.status {
+    margin-top: 20px;
+
+    padding: 12px;
+
+    background: rgba(39,230,167,0.1);
+
+    border-radius: 8px;
+
+    color: #27e6a7;
+}
+
+
+/* Features */
+
+.features {
+    padding: 90px 10%;
+    text-align: center;
+}
+
+.features h2,
+.deployment h2 {
+    font-size: 38px;
+}
+
+.section-text {
+    margin: 15px auto 50px;
+
+    color: #aab8c9;
+
+    max-width: 600px;
+}
+
+.cards {
+    display: flex;
+
+    gap: 25px;
+
+    justify-content: center;
+}
+
+.card {
+    width: 30%;
+
+    padding: 35px;
+
+    background: #0d1d31;
+
+    border: 1px solid #1c3853;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    border-color: #4fd1ff;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #aab8c9;
+
+    line-height: 1.6;
+
+    margin-top: 12px;
+}
+
+
+/* Deployment */
+
+.deployment {
+    padding: 80px 10%;
+
+    text-align: center;
+
+    background: #0b1728;
+}
+
+.deployment-box {
+    max-width: 900px;
+
+    margin: 40px auto 0;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    padding: 30px;
+
+    background: #102238;
+
+    border-radius: 15px;
+}
+
+.deployment-box p {
+    margin-top: 10px;
+
+    color: #aab8c9;
+}
+
+.success {
+    color: #27e6a7 !important;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    color: #8192a7;
+
+    background: #050c15;
+
+    line-height: 2;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .deployment-box {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+```
+
+This version gives your project a **real cloud/DevOps dashboard feel** instead of looking like a basic HTML assignment.
